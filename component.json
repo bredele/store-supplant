@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "bredele/supplant" : "*"
+    "bredele/supplant" : "*",
+    "bredele/each" : "*"
   },
   "development": {
     "bredele/store" : "*",
