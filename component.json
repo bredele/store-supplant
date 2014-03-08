@@ -4,8 +4,11 @@
   "description": "Interpolation plugin for store",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
-  "development": {},
+  "dependencies": {
+  },
+  "development": {
+    "bredele/store" : "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [

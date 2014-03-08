@@ -21,5 +21,11 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bredele/store-supplant/issues"
+  },
+  "browser" : {
+    "store" : "store-component"
+  },
+  "devDependencies": {
+    "store-component": "~0.1.3"
   }
 }
