@@ -46,6 +46,32 @@ var result = store.supplant('{{repo}}', function(val){
 store.set('repo', 'brick');
 ```
 
+### .filter(name, fn)
+
+  Apply filter(s) on variables.
+
+```js
+store.filter('upper', function(str) {
+  return str.toUpperCase();
+});
+var result = store.supplant('{{repo} | upper }');
+```
+
+or
+
+```js
+store.filter({
+  upper: function(str){
+    return str.toUpperCase();
+  },
+  bang: function(str) {
+    return str + '!'
+  }
+});
+//chaining filters
+var result = store.supplant('{{repo} | upper | bang }');
+```
+
 ## License
 
   The MIT License (MIT)

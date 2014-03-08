@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "supplant": "~0.1.2",
-    "each-bredele": "0.0.1",
+    "each-bredele": "0.0.1"
   }
 }
