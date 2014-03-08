@@ -5,19 +5,52 @@
 
 ## Installation
 
-  Install with [component(1)](http://component.io):
+  Install with [component(](http://component.io):
 
     $ component install bredele/store-supplant
 
+  Install with [nodejs)](http://nodejs.org):
+
+    $ npm install store-supplant
+
+## Idea
+
+[Store](http://github.com/bredele/store) is a small library to create model/collection objects on both client and server sides. The idea is to have a template engine which doesn't depend of the implementation in order to be used with document objects (i.e in your browser) or in nodejs.
+
 ## API
 
+```js
+var supplant = require('store-supplant');
 
+var store = new Store({
+  repo: 'store'
+});
+store.use(supplant);
+```
+
+### .supplant(str, fn)
+
+  Substitute string variables with store data and return result.
+
+```js
+var result = store.supplant('{{repo}}');
+```
+
+  Listen for changes on variables and return result.
+
+```js
+var result = store.supplant('{{repo}}', function(val){
+  console.log(val);
+});
+
+store.set('repo', 'brick');
+```
 
 ## License
 
   The MIT License (MIT)
 
-  Copyright (c) 2014 <copyright holders>
+  Copyright (c) 2014 <Olivier Wietrich> olivier.wietrich@gmail.com
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal

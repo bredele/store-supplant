@@ -9,13 +9,15 @@ module.exports = function(ctx) {
 
   var supplant = new Supplant();
 
-	ctx.supplant = function(name, fn) {
-		if(!fn) return supplant.text(name, this.data);
-		each(supplant.props(name), function(key, prop) {
-			ctx.on('change ' + prop, function(val) {
-				fn(supplant.text(name, ctx.data));
+	ctx.supplant = function(str, fn) {
+		if(fn) {
+			each(supplant.props(str), function(key, prop) {
+				ctx.on('change ' + prop, function(val) {
+					fn(supplant.text(str, ctx.data));
+				});
 			});
-		});
+		}
+		return supplant.text(str, this.data);
 	};
 
 	ctx.filter = function(name, fn) {
