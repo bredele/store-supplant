@@ -1,5 +1,4 @@
-var Supplant = require('supplant'),
-		each = require('each');
+var Supplant = require('supplant');
 
 /**
  * Expose 'store-supplant'
@@ -19,11 +18,13 @@ module.exports = function(ctx) {
   
 	ctx.supplant = function(str, fn) {
 		if(fn) {
-			each(supplant.props(str), function(key, prop) {
-				ctx.on('change ' + prop, function(val) {
+			var props = supplant.props(str),
+			l = props.length;
+			while(l--) {
+				ctx.on('change ' + props[l], function(val) {
 					fn(supplant.text(str, ctx.data));
 				});
-			});
+			}
 		}
 		return supplant.text(str, this.data);
 	};
@@ -39,7 +40,9 @@ module.exports = function(ctx) {
 	
 	ctx.filter = function(name, fn) {
 		if(typeof name !== 'string') {
-			each(name, this.filter, this);
+			for(var i in name) {
+				this.filter(i, name[i]);
+			}
 		} else {
 			supplant.filter(name, fn)
 		}

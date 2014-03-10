@@ -1,5 +1,5 @@
-var supplant = require('store-supplant'),
-    Store = require('store'),
+var supplant = require('..'),
+    Store = require('store-component'),
     assert = require('assert');
 
 describe("API", function() {
@@ -86,5 +86,4 @@ describe(".filter", function() {
   });
 
 });
-
 

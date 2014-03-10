@@ -2,11 +2,10 @@
   "name": "store-supplant",
   "repo": "bredele/store-supplant",
   "description": "Interpolation plugin for store",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
-    "bredele/supplant" : "*",
-    "bredele/each" : "*"
+    "bredele/supplant" : "*"
   },
   "development": {
     "bredele/store" : "*",

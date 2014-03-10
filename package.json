@@ -1,10 +1,10 @@
 {
   "name": "store-supplant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interpolation plugin for store",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,12 @@
     "url": "https://github.com/bredele/store-supplant/issues"
   },
   "browser": {
-    "store": "store-component",
-    "each" : "each-bredele"
+    "store": "store-component"
   },
   "devDependencies": {
-    "store-component": "~0.1.3"
+    "store-component": "~0.1.5"
   },
   "dependencies": {
-    "supplant": "~0.1.2",
-    "each-bredele": "0.0.1"
+    "supplant": "~0.1.2"
   }
 }
