@@ -2,13 +2,13 @@
   "name": "store-supplant",
   "repo": "bredele/store-supplant",
   "description": "Interpolation plugin for store",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "keywords": [],
   "dependencies": {
     "bredele/supplant" : "*"
   },
   "development": {
-    "bredele/store" : "*",
+    "bredele/datastore" : "*",
     "component/assert" : "*"
   },
   "license": "MIT",

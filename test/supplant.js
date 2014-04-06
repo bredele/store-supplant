@@ -1,5 +1,5 @@
 var supplant = require('..'),
-    Store = require('store-component'),
+    Store = require('datastore'),
     assert = require('assert');
 
 describe("API", function() {

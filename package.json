@@ -1,6 +1,6 @@
 {
   "name": "store-supplant",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Interpolation plugin for store",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,8 @@
   "bugs": {
     "url": "https://github.com/bredele/store-supplant/issues"
   },
-  "browser": {
-    "store": "store-component"
-  },
   "devDependencies": {
-    "store-component": "~0.1.5"
+    "datastore": "^1.0.0"
   },
   "dependencies": {
     "supplant": "~0.1.2"
