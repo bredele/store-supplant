@@ -1,7 +1,6 @@
-
 # store-supplant
 
-  Interpolation plugin for store
+  Interpolation plugin for **[datastore](http://github.com/bredele/datastore)**
 
 ## Installation
 
@@ -15,7 +14,7 @@
 
 ## Idea
 
-[Store](http://github.com/bredele/store) is a small library to create model/collection objects on both client and server sides. The idea is to have a template engine which doesn't depend of the implementation in order to be used with document objects (i.e in your browser) or in nodejs.
+[Store](http://github.com/bredele/datastore) is a small library to create model/collection objects on both client and server sides. The idea is to have a template engine which doesn't depend of the implementation in order to be used with document objects (i.e in your browser) or in nodejs.
 
 ## API
 
